@@ -11,12 +11,14 @@
     />
   </head>
   <body>
-    <p class="browser-advice">This app works best in Google Chrome, on a Windows Operating System</p>
+    <p class="browser-advice">
+      This app works best in Google Chrome, on a Windows Operating System
+    </p>
     <!-- Initial screen -->
     <div class="home-box custom-box">
       <h1>Quiz app</h1>
       <p>Total number of questions: <span class="total-questions"></span></p>
-    <!-- <p>How many words would you like to be tested on?</p>
+      <!-- <p>How many words would you like to be tested on?</p>
     <button class="btn">5</button>
     <button class="btn">10</button>
     <button class="btn">All (<span class="total-available-questions"></span>)</button> -->
@@ -26,8 +28,7 @@
     </div>
     <!-- Quiz screen -->
     <div class="quiz-box custom-box hide">
-      <div class="question-number">
-      </div>
+      <div class="question-number"></div>
       <button id="read-btn" class="btn">
         <img width="30" src="./images/speaker.png" alt="" /> Read the word
       </button>
@@ -35,22 +36,20 @@
       <div class="question-container">
         <div class="question-text" lang="en"></div>
         <div class="answer-text hide" lang="en"></div>
-        
-        
       </div>
       <select name="" id="voice-select"></select>
       <!-- <button id="show-definition" onclick="toggleDefinitionButtonText()" class="btn">Show definition</button>  -->
-      <button id="show-definition" onclick="showHideDefinition()" class="btn">Show definition</button>
+      <button id="show-definition" onclick="showHideDefinition()" class="btn">
+        Show definition
+      </button>
       <div class="answer-info-container">
-      <div class="did-you-know-container hide">
-        
-      <p class="did-you-know">Did you know the definition?</p>
-      <div class="option-container">
-      </div>
-      </div>
+        <div class="did-you-know-container hide">
+          <p class="did-you-know">Did you know the definition?</p>
+          <div class="option-container"></div>
+        </div>
 
-      <div class="answer-message hide"> </div>
-    </div>
+        <div class="answer-message hide"></div>
+      </div>
       <div class="next-and-answer-indicator-container">
         <div class="next-btn-container">
           <button type="button" class="next-btn btn" onclick="next()">
@@ -62,36 +61,37 @@
     </div>
     <!-- Result screen -->
     <div class="result-box custom-box hide">
-        <h1>Quiz results</h1>
-        <div class="total-score-container">
-          <p class="total-score-heading">Total score:</p>
-          <p class="total-score"></p>
-        </div>
-        <div class="btn-container">
-          <button type="button" class="btn" onclick="tryAgainQuiz()">
-            Try again
-          </button>
-          <button type="button" class="btn" onclick="goToHome()">
-            Go to home
-          </button>
-        </div>
-  <!-- <h2>Quiz summary</h2> -->
-        
-          <table>
-            <caption>Quiz summary</caption>
-            <tr>
-              <th>No.</th>
-              <th>Word</th>
-              <th>Definition</th>
-              <!-- <th>Your Answer</th>
-              <th>Correct Answer</th> -->
-              <th>Did you know the definition?</th>
-            </tr>
-            <tbody class="questions-asked-container"></tbody>
-          </table>
-        
+      <h1>Quiz results</h1>
+      <div class="total-score-container">
+        <p class="total-score-heading">Total score:</p>
+        <p class="total-score"></p>
       </div>
-  
+      <div class="btn-container">
+        <button type="button" class="btn" onclick="tryAgainQuiz()">
+          Try again
+        </button>
+        <button type="button" class="btn" onclick="goToHome()">
+          Go to home
+        </button>
+      </div>
+      <!-- <h2>Quiz summary</h2> -->
+
+      <table>
+        <caption>
+          Quiz summary
+        </caption>
+        <tr>
+          <th>No.</th>
+          <th>Word</th>
+          <th>Definition</th>
+          <!-- <th>Your Answer</th>
+              <th>Correct Answer</th> -->
+          <th>Did you know the definition?</th>
+        </tr>
+        <tbody class="questions-asked-container"></tbody>
+      </table>
+    </div>
+
     <script src="js/questions.js"></script>
     <script src="js/app.js"></script>
   </body>

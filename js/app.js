@@ -1,6 +1,6 @@
 console.clear();
 
-let category = "unknown";
+let category = "drama techniques";
 function $(type) {
   return document.querySelector(type);
 }
@@ -64,9 +64,13 @@ let yourAnswersList = [];
 //   }
 // }
 
+function determineNumberofQuestions() {
+  availableQuestions = questions.filter((q) => q.category.includes(category));
+}
+
 function setAvailableQuestions() {
   console.log("Original questions array:", questions);
-  availableQuestions = questions.filter((q) => q.category === category);
+  determineNumberofQuestions();
   console.log("Filtered questions:", availableQuestions);
 
   if (availableQuestions.length === 0) {
@@ -85,6 +89,7 @@ function setAvailableQuestions() {
   }
   questionLimit = availableQuestions.length;
 }
+// console.log(availableQuestions.length);
 
 function resetDefinitionButton() {
   showDefinitionButton.classList.remove("active");
@@ -439,7 +444,7 @@ function startQuiz() {
 
 console.log(questions);
 window.onload = function () {
-  availableQuestions = questions.filter((q) => q.category === category);
+  determineNumberofQuestions();
   homeBox.querySelector(".total-questions").innerHTML =
     availableQuestions.length;
 };
